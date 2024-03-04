@@ -1,0 +1,126 @@
+/* MIS TRABAJOS */
+
+.trabajos{
+    display:flex;
+    justify-content:center;
+}
+.trabajo_dos{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+.trabajo_uno,
+.trabajo_dos{
+    min-width:390px;
+}
+.work{
+    width:370px;
+    height:200px;
+    background:rgb(234, 234, 234);
+    border-radius:10px;
+    margin:10px;
+    overflow:hidden;
+    position:relative;
+}
+.work img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.content{
+    position:absolute;
+    box-sizing: border-box;
+    width:100%;
+    height:72%;
+    bottom:-150px;
+    color:var(--letras);
+    padding:10px;
+    transition:.4s;
+}
+.first{
+    height:40%;
+    bottom:-500px;
+}
+.work:hover .content{
+    transition:1s;
+    bottom:0px;
+}
+.covertor{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    transition:3s ;
+}
+.work:hover .covertor{
+    background: var(--degrade)
+}
+.content p{
+    font-size:14px;
+}
+.content .lenguajes{
+    font-size:13px;
+    font-family:monospace;
+    margin-bottom:7px;
+    opacity:70%;
+    color:var(--letras);
+}
+.content a{
+    text-decoration:none;
+    color:var(--fondo);
+    position:absolute;
+    bottom:0;
+    left:0;
+    padding:5px 10px;
+    border-radius:0px 50px 0px 0px;
+    width:120px;
+    font-weight:bold;
+    background:var(--primary);
+    font-size:14px;
+}
+.trabajo_uno .work:nth-child(1){
+    height:97%;
+    min-height:500px;
+    max-height:650px;
+}
+
+.after_footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    color:var(--letras);
+    margin-top:80px;
+}
+.after_footer p,
+.navegacion p{
+    font-size:30px;
+    font-weight:bold;
+    margin:5px;
+    font-family:'Lilita One';
+    font-weight:normal
+}
+.autor p{
+    text-align:center;
+    color:var(--letras);
+    margin:20px;
+}
+
+
+@media(max-width:900px){
+    .trabajos{
+        flex-wrap:wrap;
+    }
+    #portafolio h2{
+        font-size:45px;
+        text-align:center;
+        margin-top:30px;
+    }
+}
+@media(max-width:500px){
+    .after_footer{
+        flex-direction:column;
+        align-items:center;
+    }
+}
+

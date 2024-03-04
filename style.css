@@ -1,0 +1,441 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'raleway',helvetica;
+    scroll-behavior: smooth;
+    
+}
+:root {
+    --fondo:linear-gradient(to right, #203A43, #0F2027, #2C5364);
+    --letras:#f3f3f3;
+    --primary: rgb(12, 157, 241);
+    --secundary:rgb(42, 57, 87);
+    --foto:rgba(0, 85, 255, 0.101);
+    --degrade: linear-gradient(rgba(0, 98, 255, 0.495), black);
+}
+
+/* fondo azul (naranja) */
+:root {
+    --fondo:#082233;
+    --letras:#ededed;
+    --primary: #ff8b16;
+    --secundary: rgb(14, 49, 74);
+    --foto:#143d5926;
+    --degrade:linear-gradient(#005ff77b, black);
+}
+/* fondo amarillo (vede) */
+/* :root {
+    --fondo:#ffd55a;
+    --letras:#293250;
+    --primary: #8bcb96;
+    --secundary: rgb(254, 198, 41);
+    --foto:#ffd65a19;
+    --degrade: linear-gradient(#ffbf004e, rgb(245, 213, 83));
+} */
+/* fondo negro (rojo) */
+/* :root {
+    --fondo: #000 ;
+    --letras: #FFF ;
+    --primary: #f02222;
+    --secundary:rgb(46, 46, 46);
+    --foto:rgba(0, 0, 0, 0.214);
+    --degrade: linear-gradient(#ff000095, black);
+} */
+/* fondo azul (verde) */
+/* :root {
+    --fondo: rgb(42, 57, 87);
+    --letras: #e8eff2;
+    --primary: rgb(135, 186, 135);
+    --secundary: rgb(33, 35, 44);
+    --foto:rgba(42, 57, 87, 0.165);
+    --degrade: linear-gradient(rgba(25, 49, 96, 0.221), black);
+} */
+/* fondo verde (verde) */
+/* :root {
+    --fondo: rgb(72, 208, 149);
+    --letras: #afeacf;
+    --primary: rgb(0, 164, 120);
+    --secundary: rgb(33, 35, 44);
+    --foto:rgba(0, 164, 120, 0.129);
+    --degrade: linear-gradient(rgba(0, 255, 229, 0.423), rgb(0, 0, 0));
+} */
+body{
+    background: var(--fondo);
+}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:0px 10px;
+}
+/* .container::after{
+    content:'';
+    width:350px;
+    height:350px;
+    border-radius:30px;
+    border:40px solid rgba(255, 255, 255, 0.066);
+    filter:blur(5px);
+    position:absolute;
+    top:800px;
+    left:190px;
+    z-index:-1;
+} */
+header{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    padding:0px 10px;
+    color:var(--letras);
+    background:rgba(0, 0, 0, 0.038);
+    backdrop-filter: blur(10px);
+    display:flex;
+    z-index:10;
+}
+.navegacion{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:70px;
+    width:1200px;
+    margin:auto;
+}
+.menu a{
+    color:var(--letras);
+    text-decoration:none;
+    margin:0px 10px;
+    padding:2px 5px;
+    font-family:'raleway';
+    transition:0.7s;
+    border-bottom:2px solid rgba(255, 255, 255, 0);
+}
+.menu a:hover{
+    color: var(--primary);
+    border-bottom:2px solid var(--primary);
+}
+.sobreMenu{
+    position:fixed;
+    right:0;
+    top:0;
+    width:100%;
+    height:100vh;
+    z-index:20;
+    transition:.7s;
+    clip-path: circle(12% at 100% 0);
+    display:none;
+}
+.envolver{
+    clip-path: circle(150% at 100% 0);
+    background:var(--secundary)
+}
+.enlaces{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    height:100%;
+}
+.enlaces h2{
+    font-weight:normal;
+    font-family:'Lilita One';
+    color:var(--primary);
+    font-size:38px;
+    margin-bottom:20px;
+}
+.enlaces a{
+    font-family:'raleway';
+    text-decoration:none;
+    color:var(--letras);
+    font-weight:bold;
+    font-size:22px;
+    margin:15px;
+}
+.sobreMenu img{
+    width:43px;
+    position:absolute;
+    right:0;
+    padding:15px;
+}
+.container .contactame{
+    background:var(--primary);
+    padding:9px 40px 9px 20px;
+    text-decoration:none;
+    letter-spacing: 2px;
+    font-weight:bold;
+    color:var(--letras);
+    border-radius:40px;
+    margin-left:10px;
+    position:relative;
+    overflow:hidden;
+    box-sizing: border-box;
+    border:3px solid rgba(255, 255, 255, 0);
+    transition:0.5s;
+}
+.contactame img{
+    width:22px;
+    position:absolute;
+    bottom:0;
+    top:0;
+    right:10px;
+    margin:auto;
+    opacity:90%;
+    transition:0.7s;
+    opacity:80%;
+}
+.container .contactame:hover{
+    border:3px solid rgb(0, 186, 115);
+    background:rgb(0, 186, 115);;
+    color:white;
+}
+.enlaces .contactame{
+    padding:9px 50px 9px 20px;
+    font-size:18px;
+}
+.principal{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    color:var(--letras);
+}
+.principal p{
+    font-size:2.5vw; /*  40px  */
+}
+.dev,
+.desing{
+    display:none;
+    color:var(--primary);
+    font-family:monospace;
+    font-weight:bold;
+    font-size:37px;
+}
+.redes a img{
+    width:30px;
+    margin:30px 15px 5px 15px;
+    opacity:90%;
+    transition:0.3s;
+}
+.redes a img:hover{
+    transform:scale(1.3);
+}
+.correo{
+    filter:invert()
+}
+
+@keyframes typing{
+    from{ width:0;}
+}
+    
+.uno{
+    display:block;
+    white-space:nowrap;
+    border-right:4px solid;
+    width: 18ch;
+    animation:3s typing steps(18) infinite alternate;
+    overflow:hidden;
+}
+.principal h1{
+    font-size:8vw; /*  140px  */
+    font-family:'Lilita One';
+    font-weight:lighter;
+}
+.flecha{
+    position:absolute;
+    bottom:0; 
+    width:70px;
+    left:0;
+    right:0;
+    margin:auto;
+    margin-bottom:50px;
+    filter:invert(90%)
+}
+
+/* SOBRE MI */
+.sobre_mi{
+    height:85vh;
+    display:flex;
+    align-items:center;
+    padding:0px 3px
+}
+.sobre_mi div{
+    width:50%;
+    color:var(--letras);
+}
+.imagen{
+    display:flex;
+    justify-content: center;
+}
+.imagen .caja_imagen{
+    background:var(--primary);
+    height:500px;
+    min-width:350px;
+    max-width:350px;
+    border-radius:10% 30%;
+    overflow:hidden;
+    position:relative;
+}
+.imagen .caja_imagen img{  /* tamaño de la imagen */
+    width:100%;
+    position:absolute;
+    bottom:0;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.262));
+    filter:invert();
+    filter:blur(0px);
+}
+.imagen .caja_imagen div{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:var(--foto);
+}
+.mis_datos h2,
+#habilidades h2,
+#portafolio h2{
+    color:var(--primary);
+    font-size:60px;
+    font-family:'Lilita One';
+    font-weight:normal;
+    padding-top:30px;
+    margin-bottom:50px;
+}
+
+.mis_datos h2{font-size:80px;}
+.up_cv{
+    width:100%;
+    color:var(--letras);
+    text-decoration:none;
+    padding:8px 18px;
+    margin:0px 10px;
+    border-radius:30px;
+    border:3px solid rgb(255, 255, 255);
+    font-family:'raleway';
+    font-weight:bold;
+    letter-spacing: 2px;
+    transition:1s;
+}
+.up_cv:hover{
+    background:white;
+    color:var(--primary);
+}
+.one{
+    color:var(--letras);
+    background:none;
+    border:0;
+    border-bottom:4px solid rgba(255, 255, 255, 0);
+    font-size:22px;
+    margin-right:15px;
+    padding:4px 10px;
+}
+.per{
+    color:var(--primary);
+    border-bottom:4px solid var(--primary);
+}
+.one:hover{
+    color:var(--primary);
+}
+.dos{
+    display:none;
+    height:300px;
+    margin:30px 0px;
+}
+.dos .contactame{
+    margin:0;
+}
+.mis_datos .perfil{
+    width:100%;
+    display:block;
+}
+.mis_datos .perfil p{
+    line-height:25px;
+    margin-bottom:50px;
+}
+.mis_datos .estudios{
+    color:var(--letras);
+}
+.mis_datos .estudios h3{
+    margin:5px 0px;
+}
+.mis_datos .estudios p{
+    margin-bottom:15px;
+}
+.certificados li:nth-child(odd){
+    font-weight:bold;
+    margin:15px 0px 0px 0px;
+}
+.certificados{
+    margin-left:30px;
+}
+.certificados li:nth-child(even){
+    list-style:none;
+    margin:7px 5px 10px 5px;
+    font-size:15px;
+    opacity:80%;
+}
+
+@media(max-width:900px){
+    .sobre_mi{
+        flex-wrap:wrap;
+        justify-content: center;
+        height:100%;
+    }
+    .mis_datos h2{
+        text-align:center;
+        margin-top:20px;
+        font-size:55px;
+    }
+    .imagen .caja_imagen{
+        height:380px;
+        min-width:280px;
+    }
+    .sobre_mi .mis_datos{
+        width:100%;
+    }
+    .botones{
+        display:flex;
+        min-width:100%;
+    }
+    .one{
+        flex:1;
+    }
+}
+
+@media(max-width:550px){
+    .principal h1{
+        font-size:60px;
+        width:300px;
+        text-align:center;
+        margin:7px 0px;
+    }
+    .principal p{
+        font-size:22px;
+    }
+    .flecha{
+        width:50px;
+        bottom:0px;
+    }
+    .menu{
+        display:none;
+    }
+    .sobreMenu{
+        display:block;
+    }
+}
+
+
+/* scroll animacion */
+.caja1{
+    animation: main linear both;
+    animation-timeline: view();
+    animation-range:entry 7% cover 40%
+}
+
+@keyframes main{
+    from{
+        opacity:80%;
+        scale:80%
+    }
+    to{
+        opacity:100%;
+        scale:100%
+    }
+}
