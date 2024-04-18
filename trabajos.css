@@ -27,6 +27,8 @@
     height:100%;
     object-fit: cover;
 }
+.work .imagen-uno{
+}
 .content{
     position:absolute;
     box-sizing: border-box;
